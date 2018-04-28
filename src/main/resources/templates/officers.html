@@ -1,14 +1,8 @@
 <!DOCTYPE html>
+<html layout:decorator="layout/layout" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
 <html lang="en">
-<head>
-    <title>Bootstrap Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
 <body>
+<th:block layout:fragment="content">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 <div class="container text-center">
     <h3>Officer Info</h3>
@@ -58,6 +52,7 @@
     </table>
 </div>
 </nav>
+</th:block>
 </body>
 </html>
 
