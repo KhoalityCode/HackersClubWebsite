@@ -1,57 +1,71 @@
 <!DOCTYPE html>
-<html layout:decorator="layout/layout" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
-<html lang="en">
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
 <body>
 <th:block layout:fragment="content">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-<div class="container text-center">
-    <h3>Officer Info</h3>
-</div>
-    <div class="container">
-    <table class="table">
-        <thead>
-        <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Email</th>
-            <th>Role</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>Zahid</td>
-            <td>Anwar</td>
-            <td>zanwar@fontbonne.edu</td>
-            <td>Adviser</td>
-        </tr>
-        <tr>
-            <td>Zachary</td>
-            <td>Hempen</td>
-            <td>hempenz@fontbonne.edu</td>
-            <td>President</td>
-        </tr>
-        <tr>
-            <td>Paul</td>
-            <td>Morrison</td>
-            <td>pmorrison@fontbonne.edu</td>
-            <td>Vice-President</td>
-        </tr>
-        <tr>
-            <td>Mya</td>
-            <td>Robinson</td>
-            <td>mrobinson@fontbonne.edu</td>
-            <td>Secretary</td>
-        </tr>
-        <tr>
-            <td>John</td>
-            <td>McQuaide</td>
-            <td>jmcquaide@fontbonne.edu</td>
-            <td>Treasure</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-</nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container text-center">
+     <h3>Officer Info</h3>
+    </div>
+        <!-- speakers -->
+        <div class="content">
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" th:src="@{/angie.png}" alt="Card image cap" />
+                    <div class="card-block">
+                        <h4 class="card-title">Zahid Anwar</h4>
+                        <p class="card-text">Adviser</p>
+                        <p class="card-text">Email: zanwar@fontbonne.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" th:src="@{/ecma.png}" alt="Card image cap" />
+                    <div class="card-block">
+                        <h4 class="card-title">Zachary Hempen</h4>
+                        <p class="card-text">President</p>
+                        <p class="card-text">Email: hempenz@fontbonne.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" th:src="@{/geo.png}" alt="Card image cap" />
+                    <div class="card-block">
+                        <h4 class="card-title">Paul Morrison</h4>
+                        <p class="card-text">Vice-President</p>
+                        <p class="card-text">Email: morrisonp@fontbonne.edu</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" th:src="@{/jay.png}" alt="Card image cap" />
+                    <div class="card-block">
+                        <h4 class="card-title">Mya Robinson</h4>
+                        <p class="card-text">Secretary</p>
+                        <p class="card-text">robinsonm@fontbonne.edu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card">
+                    <img class="card-img-top" th:src="@{/json.png}" alt="Card image cap" />
+                    <div class="card-block">
+                        <h4 class="card-title">John McQuaide</h4>
+                        <p class="card-text">Treasurer</p>
+                        <p class="card-text">Email: mcquaidej@fontbonne.edu</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /speakers -->
+    </nav>
 </th:block>
 </body>
 </html>

@@ -29,6 +29,18 @@ class RegistrationController {
         return "landing";
     }
 
+    @RequestMapping(value = "/officers", method = RequestMethod.GET)
+    public String officers1(Model model) {
+        model.addAttribute("attendee", new Attendee());
+        return "officers";
+    }
+
+    @RequestMapping(value = "/events", method = RequestMethod.GET)
+    public String events1(Model model) {
+        model.addAttribute("attendee", new Attendee());
+        return "events";
+    }
+
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String home(Model model) {
         model.addAttribute("attendees", attendeeService.getAttendee());
