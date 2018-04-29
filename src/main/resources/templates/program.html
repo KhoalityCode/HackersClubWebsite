@@ -55,21 +55,21 @@
         <!-- signup form -->
         <hr />
         <form action="#" th:action="@{/register}" th:object="${attendee}" method="post">
-            <div class="row py-4 text-muted">
-                <div class="col-md-6">
-                    <p><strong>About Fontbonne University</strong></p>
-                    <p>Fontbonne University's values-based campus community promotes and embraces respect, compassion and service. Learn more. Be more.</p>
-                </div>
-                <div class="col-md-6">
-                    <p><strong>Stay up-to-date on upcoming Hacker Club meetings</strong></p>
-                    <div class="input-group">
-                        <input id="register" type="text" th:field="*{email}" class="form-control" placeholder="Enter your email for info..." aria-label="Enter your email for info..." aria-describedby="basic-addon2" />
-                        <span class="input-group-btn"> <button class="btn btn-primary" type="submit" value="Submit">Sign up</button></span>
+                <div class="row py-4 text-muted">
+                    <div class="col-md-6">
+                        <p><strong>About Fontbonne University</strong></p>
+                        <p>Fontbonne University's values-based campus community promotes and embraces respect, compassion and service. Learn more. Be more.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Stay up-to-date on upcoming Hacker Club meetings</strong></p>
+                        <div class="input-group">
+                            <input id="register" type="text" th:field="*{email}" class="form-control" placeholder="Enter your email for info..." aria-label="Enter your email for info..." aria-describedby="basic-addon2" />
+                            <span class="input-group-btn"> <button class="btn btn-primary" type="submit" value="Submit">Sign up</button></span>
+                        </div>
                     </div>
                 </div>
-            </div>
         </form>
-        <hr /><!-- /signup form -->
+        <hr /> <!--signup form -->
 
         <!-- footer -->
         <div class="row py-3">

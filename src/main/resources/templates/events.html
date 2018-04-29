@@ -1,82 +1,22 @@
 <!DOCTYPE html>
-<html layout:decorator="layout/layout" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
-    <head>
-        <!-- Theme Made By www.w3schools.com - No Copyright -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style>
-      body {
-          font: 20px Montserrat, sans-serif;
-          line-height: 1.8;
-          color: #f5f6f7;
-      }
-      p {font-size: 16px;}
-      .margin {margin-bottom: 45px;}
-      .bg-1 {
-          background-color: #1abc9c; /* Green */
-          color: #ffffff;
-      }
-      .bg-2 {
-          background-color: #474e5d; /* Dark Blue */
-          color: #ffffff;
-      }
-      .bg-3 {
-          background-color: #ffffff; /* White */
-          color: #555555;
-      }
-      .bg-4 {
-          background-color: #2f2f2f; /* Black Gray */
-          color: #fff;
-      }
-      .container-fluid {
-          padding-top: 70px;
-          padding-bottom: 70px;
-      }
-      .navbar {
-          padding-top: 15px;
-          padding-bottom: 15px;
-          border: 0;
-          border-radius: 0;
-          margin-bottom: 0;
-          font-size: 12px;
-          letter-spacing: 5px;
-      }
-      .navbar-nav  li a:hover {
-          color: #1abc9c !important;
-      }
-      </style>
-    </head>
-    <body>
-    <th:block layout:fragment="content">
-    <!-- First Container -->
-    <div class="container-fluid bg-1 text-center">
-        <h3 class="margin">Recent Events</h3>
-        <img th:src="@{/clubpic.jpg}" class="img-responsive img-circle margin" style="display:inline" alt="clubpic" width="350" height="350">
-    </div>
+<html layout:decorator="layout/layout" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
+<body>
+<th:block layout:fragment="content">
 
-    <!-- Second Container -->
-    <div class="container-fluid bg-2 text-center">
-        <h3 class="margin">First Meeting</h3>
-        <img src="cinqueterre.jpg" class="img-rounded" alt="1stclubpic"><!--Ill put First club pic here-->
-        <p>For our first meeting we discussed web exploitations along with a hands on activity trying to exploit certain vulnerabilities on a local vulnerable website.</p>
+            <!-- Second Container -->
+            <div class="container-fluid bg-2 text-center">
+                <h3 class="margin">First Meeting</h3>
+                <img th:src="@{/1stclubpic.jpg}" class="img-responsive img-circle margin" style="display:inline" alt="1stclubpic" width="500" height="350"  /><!--Ill put First club pic here-->
+                <p>For our first meeting we discussed web exploitations along with a hands on activity trying to exploit certain vulnerabilities on a local vulnerable website.</p>
+            </div>
+            <!-- Third Container -->
+            <div class="container-fluid bg-3 text-center">
+                <h3 class="margin">Second Meeting</h3>
+                <img th:src="@{/2ndclubpic.jpg}" class="img-responsive img-circle margin" style="display:inline" alt="2ndclubpic" width="500" height="350" /><!--Ill put Second club pic here-->
+                <p>For our second meeting we did a hands on activity using Metasploit and Armitage to attack a vulnerable ISO called Metasploitable 2</p>
+                <p>Metasploitable 2 is an open-source ISO design to be vulnerable to hackers can practice their techniques.</p>
+            </div>
 
-    </div>
-    <!-- Third Container -->
-    <div class="container-fluid bg-3 text-center">
-        <h3 class="margin">Second Meeting</h3>
-        <img th:src="@{/2ndclubpic.jpg}" class="img-rounded" alt="2ndclubpic"><!--Ill put Second club pic here-->
-        <p>For our second meeting we did a hands on activity using Metasploit and Armitage to attack a vulnerable ISO called Metasploitable 2</p>
-        <p>Metasploitable 2 is an open-source ISO design to be vulnerable to hackers can practice their techniques.</p>
-    </div>
-
-    <!-- Footer -->
-    <footer class="container-fluid bg-4 text-center">
-        <p>Fontbonne University Hackers' Club</p>
-    </footer>
-    </th:block>
+        </th:block>
     </body>
 </html>

@@ -43,7 +43,7 @@ class RegistrationController {
 
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     String home(Model model) {
-        model.addAttribute("attendees", attendeeService.getAttendee());
+        model.addAttribute("attendee", attendeeService.getAttendee());
         return "admin";
     }
     @RequestMapping(value = "/", method = RequestMethod.GET)
@@ -53,10 +53,10 @@ class RegistrationController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String registerDetails(@ModelAttribute Attendee attendee, RedirectAttributes redirectAttributes)
+    public String register(@ModelAttribute Attendee attendee, RedirectAttributes redirectAttributes)
     {
         attendeeService.addAttendee(attendee);
-        redirectAttributes.addFlashAttribute("flash", "Registered "+ attendee.getName() + " Details: " + attendee.getEmail() + ", " + attendee.getPhone());
+        redirectAttributes.addFlashAttribute("flash", "Registered "+ attendee.getEmail());
         return "redirect:/";
     }
 
@@ -75,7 +75,7 @@ class RegistrationController {
         catch (Exception ex){
             modelAndView.addObject("message", "Failed to add Attendee: " + ex.getMessage());
         }
-        modelAndView.addObject("attendees", attendeeService.getAttendee());
+        modelAndView.addObject("attendee", attendeeService.getAttendee());
         return modelAndView;
     }
 }

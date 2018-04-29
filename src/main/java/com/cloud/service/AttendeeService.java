@@ -16,6 +16,7 @@ public class AttendeeService {
     }
 
     public Iterable<Attendee> getAttendee(){
+
         return attendeeRepository.findAll();
     }
 }
