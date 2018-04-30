@@ -70,10 +70,10 @@ class RegistrationController {
             Attendee attendee = new Attendee();
             attendee.setEmail(email);
             attendee = attendeeService.addAttendee(attendee);
-            modelAndView.addObject("message", "Attendee added with email: " + attendee.getEmail());
+            modelAndView.addObject("message", "Member added with email: " + attendee.getEmail());
         }
         catch (Exception ex){
-            modelAndView.addObject("message", "Failed to add Attendee: " + ex.getMessage());
+            modelAndView.addObject("message", "Failed to add Member: " + ex.getMessage());
         }
         modelAndView.addObject("attendee", attendeeService.getAttendee());
         return modelAndView;
